@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #ff9966, #ff5e62), url('background.jpg'); /* Substitute with your desired image */
+            background: linear-gradient(to right, #ff9966, #ff5e62), url('background.jpg');
             color: #000;
             text-align: center;
             background-size: cover;
@@ -120,7 +120,7 @@
 <body>
     <header>
         <h1>Welcome to the Justin Bieber Fan Page! 🎤🎶</h1>
-        <p><?php echo calculateAge('1994-03-01'); ?> since the world became a better place!</p>
+        <p id="age"></p>
     </header>
 
     <div class="container">
@@ -150,24 +150,6 @@
             </div>
         </section>
 
-        <section class="comments">
-            <h2>Leave a Comment ✍️</h2>
-            <form action="submit_comment.php" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <textarea name="comment" placeholder="Your Comment" rows="5" required></textarea>
-                <button type="submit">Submit Comment 📨</button>
-            </form>
-
-            <div class="comment-list">
-                <h3>Fan Comments 💬</h3>
-                <?php
-                // Include comments from a file or database
-                $comments = file_get_contents('comments.txt');
-                echo nl2br($comments);
-                ?>
-            </div>
-        </section>
-
         <section class="location-section">
             <div class="location-indicator">
                 <p>Live Location: <strong>Los Angeles, CA 📍</strong></p>
@@ -177,22 +159,22 @@
     </div>
 
     <script>
+        function calculateAge(birthdate) {
+            const birthDate = new Date(birthdate);
+            const now = new Date();
+            const ageDiff = new Date(now - birthDate);
+            const years = ageDiff.getUTCFullYear() - 1970; // subtract epoch year 1970
+            const months = ageDiff.getUTCMonth();
+            const days = ageDiff.getUTCDate() - 1;
+            return `${years} years, ${months} months, and ${days} days`;
+        }
+
         function wink(imgElement, winkGif, originalImage) {
             imgElement.src = winkGif;
             setTimeout(function() {
                 imgElement.src = originalImage;
-            }, 2000); // Adjust the time to how long you want the wink gif to play
+            }, 2000);
         }
     </script>
 </body>
 </html>
-
-<?php
-function calculateAge($birthdate) {
-    $birthDate = new DateTime($birthdate);
-    $now = new DateTime();
-    $age = $now->diff($birthDate);
-
-    return $age->y . " years, " . $age->m . " months, and " . $age->d . " days";
-}
-?>
