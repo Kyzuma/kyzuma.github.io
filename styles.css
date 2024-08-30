@@ -1,0 +1,68 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#main-header{
+    background-color: rgb(30, 144, 255);
+    color:whitesmoke;
+    margin:0;
+    border: rgb(30, 144, 255) 1px solid;
+    text-align: center;
+}
+
+#navigation-bar{
+    background-color: rgb(70, 130, 180);
+    border: rgb(70, 130, 180) 1px solid;
+}
+
+#navigation-bar li{
+    display:inline;
+    font-size: larger;
+}
+
+#navigation-bar a{
+    text-decoration: none;
+    color: whitesmoke;
+    margin-right:30px;
+}
+
+.mainphoto, .about{
+    display:inline-block;
+}
+
+.mainphoto{
+    width:35%;
+    border: black 2px solid;
+}
+
+.aboutme{
+    background-color: aqua;
+}
+
+.about{
+    width:55%;
+    padding-top: 0;
+    vertical-align: top;
+    margin-left:60px;
+}
+
+.about h1{
+    text-align:center;
+}
+
+.footer-box{
+    background-color: gray;
+    text-align:center;
+    color:white;
+    border: gray solid 1px;
+}
+
+.cleared{
+    text-decoration: line-through;
+}

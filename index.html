@@ -3,55 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>My Profile</title>
 
-    <style>
-        .mainphoto
-        {
-            width: 20%;
-            border-radius:50px;
-            border: 5px dashed black;
-            display:block;
-            margin:auto;       
-        }
-        header
-        {
-            text-align: center;
-        }
-        h1
-        {
-            text-align:center;
+    <!-- External CSS styling -->
+    <link rel="stylesheet" href="styles.css">
 
-        }
-        .biography
-        {
-            background-color: red;
-            padding:10px 10px 10px 10px;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <h1>Hello! I am Ka Yong</h1>
+    <header id = "main-header">
+        <h1>Hello! I am Ka Yong 🫡</h1>
     </header>
-    <img class = 'mainphoto' src ="kayong.jpg"/>
-    <div>
-        <h1>I love cats!</h1>
+
+    <nav id="navigation-bar">
+        <div>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#todo">To Do!</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact Me!</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class = 'aboutme'>
+        <img class = 'mainphoto' src ="kayong.jpg" id ="about"/>
+        <aside class = "about">
+            <h1>About Me!</h1>
+            <h2>
+                I am a Y2 WSDeg Software Engineering Student! I am huge Potterhead!🧙‍♂️
+                I heard Times New Roman makes you read faster? What do you think?
+            </h2>
+        </aside>
+    </div>
+    
         <h1>
-            <ol>To Do List
+            <ul id = "todo">To Do List
             <li>Add a Youtube Video</li>
-            <li>Small Biography about myself (in a box)</li>
+            <li class = 'cleared'>Small Biography about myself (in a box)</li>
             <li>Add more stuff</li>
             <li>Apply as much of CSS as I can</li>
-            </ol>
+            </ul>
         </h1>
-        <div class = "biography">
-            <h1>About Me!</h1>
-                <h2>
-                    I am a Y2 WSDeg Software Engineering Student! I am huge Potterhead!🧙‍♂️
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias minima perspiciatis asperiores enim odio! Quam ut accusamus, voluptatem nulla quisquam quaerat eum repellat fugit. Doloribus magnam mollitia ipsam modi et.
-                </h2>
-        </div>
+
+    <div class="footer-box">
+        <p>
+            Copyright &copy; 2024 Ka Yong
+        </p>
+    </div>
 </body>
 </html>
