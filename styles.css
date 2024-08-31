@@ -54,6 +54,15 @@ body {
 
 .about h1{
     text-align:center;
+    font-size:xx-large;
+}
+
+.travel{
+    text-align: center;
+}
+
+.update{
+    text-align: center;
 }
 
 .footer-box{
